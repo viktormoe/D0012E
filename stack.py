@@ -17,7 +17,7 @@ class Stack:
         
     def pop(self):
         if self.isEmpty():
-            return IndexError
+            raise IndexError("pop from empty stack")
         popped_node = self.head
         self.head = self.head.next
         self.size -= 1
@@ -36,3 +36,8 @@ class Stack:
             print(currentNode.value, end=" - ")
             currentNode = currentNode.next
         print()
+
+    def peek(self):
+        if self.isEmpty():
+            raise IndexError("peek from empty stack")
+        return self.head.value
