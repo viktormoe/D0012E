@@ -24,8 +24,11 @@ def sortStack(stackA):
 
 if __name__ == "__main__":
     stackA = Stack()
-    
-    with open("data_set_10000.txt", "r") as file:
+
+    #with open("data_set_10000.txt", "r") as file:
+    #with open ("data_set_100_random.txt", "r") as file:
+    #with open ("data_set_100_best.txt", "r") as file:
+    with open ("data_set_100_worst.txt", "r") as file:
         numbers = [int(x) for x in file.read().split()]
 
     for num in numbers:
